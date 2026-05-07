@@ -47,12 +47,34 @@ footer {
     text-align: center;
 }
 
+
+
+
 @media screen and (min-width: 860px) {
 
-    main{
+    main {
         display: flex;
     }
+
+    nav a {
+        display: inline-block;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        text-align: right;
+    }
 }
+
+
+
+
+
+
+
 
 @media screen and (min-width: 550px) and (max-width: 859px) {
     main{
