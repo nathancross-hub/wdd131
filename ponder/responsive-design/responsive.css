@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: Roboto, sans-serif;
 }
 header,
@@ -21,7 +23,6 @@ section {
   background-color: white;
   margin: 1em;
   border: 1px solid #ccc;
-  min-width: 200px;
 }
 nav a {
     padding: 20px;
@@ -47,43 +48,51 @@ footer {
     text-align: center;
 }
 
+.hide a {
+    display: none;
+}
 
 
-
-@media screen and (min-width: 860px) {
-
+@media screen and (min-width: 700px) {
     main {
-        display: flex;
-    }
-
-    nav a {
-        display: inline-block;
-    }
-
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }  
     .menu-btn {
         display: none;
     }
-
+    nav a {
+        display: inline;
+    }
     nav {
         text-align: right;
     }
+    .hide a {
+    display: inline;
+}
 }
 
-
-
-
-
-
-
-
-@media screen and (min-width: 550px) and (max-width: 859px) {
-    main{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    section {
-        max-width: 300px;
+@media screen and (min-width: 1000px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+          
+
+
+
+nav a {
+    padding: 20px;
+    color: black;
+    display: block;
+}
