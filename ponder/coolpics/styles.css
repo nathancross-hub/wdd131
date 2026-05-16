@@ -34,6 +34,19 @@ img{
     height: 250px;
     box-shadow: 5px 5px 25px;
 }
+
+.modal img {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+
+    object-fit: contain;
+
+    border: none;
+    box-shadow: none;
+}
+
 body{
     background-color: lightslategray;
     margin: 0;
@@ -50,6 +63,9 @@ footer{
     margin: 0;
 }
 
+.show {
+    display: grid;
+}
 
 @media screen and (min-width:768px){
     #images{
@@ -74,3 +90,34 @@ footer{
     }
 }
 
+.show {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
