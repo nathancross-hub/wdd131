@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Character Card</title>
+  <meta name="description" content="A WDD 131 character card using a JavaScript object.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Character Card">
+  <meta property="og:description" content="A character card with attack and level up buttons.">
+  <meta property="og:url" content="https://yourgithubusername.github.io/wdd131/charactercard">
+  <meta property="og:image" content="https://yourgithubusername.github.io/wdd131/charactercard/images/preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Character Card">
+  <meta name="twitter:description" content="A character card with attack and level up buttons.">
+  <meta name="twitter:image" content="https://yourgithubusername.github.io/wdd131/charactercard/images/preview.png">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="card">
+      <img id="character-image" class="image" src="snortleblat.webp" alt="Character image">
+      <h1 id="character-name" class="name"></h1>
+
+      <div class="stats">
+        <p><strong>Class:</strong> <span id="character-class"></span></p>
+        <p><strong>Level:</strong> <span id="character-level"></span></p>
+        <p><strong>Health:</strong> <span id="character-health"></span></p>
+        <p id="message"></p>
+      </div>
+
+      <div class="buttons">
+        <button id="attack-button">Attacked</button>
+        <button id="level-button">Level Up</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
