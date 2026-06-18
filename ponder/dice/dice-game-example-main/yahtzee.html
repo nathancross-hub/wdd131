@@ -57,52 +57,53 @@
 
         <div id="scoreArea">
 
-            <table id="scorecard">
-
-                <div id="scorecard">
-                                
-                    <div class="scoreColumn">
-                    
-                        <h3>Upper Section</h3>
-                    
-                        <button data-score="ones">Ones: <span id="ones">-</span></button>
-                        <button data-score="twos">Twos: <span id="twos">-</span></button>
-                        <button data-score="threes">Threes: <span id="threes">-</span></button>
-                        <button data-score="fours">Fours: <span id="fours">-</span></button>
-                        <button data-score="fives">Fives: <span id="fives">-</span></button>
-                        <button data-score="sixes">Sixes: <span id="sixes">-</span></button>
-                    
-                        <div class="totalBox">
-                            Upper Total: <span id="upperTotal">0</span>
-                        </div>
-                    
-                        <div class="totalBox">
-                            Bonus: <span id="bonusScore">0</span>
-                        </div>
-                    
+            <div id="scorecard">
+                            
+                <div class="scoreColumn">
+                
+                    <h3>Upper Section</h3>
+                
+                    <button data-score="ones">Ones: <span id="ones">-</span></button>
+                    <button data-score="twos">Twos: <span id="twos">-</span></button>
+                    <button data-score="threes">Threes: <span id="threes">-</span></button>
+                    <button data-score="fours">Fours: <span id="fours">-</span></button>
+                    <button data-score="fives">Fives: <span id="fives">-</span></button>
+                    <button data-score="sixes">Sixes: <span id="sixes">-</span></button>
+                
+                    <div class="totalBox">
+                        Upper Total: <span id="upperTotal">0</span>
                     </div>
                 
-                    <div class="scoreColumn">
-                    
-                        <h3>Lower Section</h3>
-                    
-                        <button data-score="threeKind">3 Kind: <span id="threeKind">-</span></button>
-                        <button data-score="fourKind">4 Kind: <span id="fourKind">-</span></button>
-                        <button data-score="fullHouse">Full House: <span id="fullHouse">-</span></button>
-                        <button data-score="smallStraight">Small Straight: <span id="smallStraight">-</span></button>
-                        <button data-score="largeStraight">Large Straight: <span id="largeStraight">-</span></button>
-                        <button data-score="yahtzee">Yahtzee: <span id="yahtzee">-</span></button>
-                        <button data-score="chance">Chance: <span id="chance">-</span></button>
-                    
-                        <div class="grandTotal">
-                            Grand Total: <span id="totalScore">0</span>
-                        </div>
-                    
+                    <div class="totalBox">
+                        Bonus: <span id="bonusScore">0</span>
                     </div>
                 
                 </div>
+            
+                <div class="scoreColumn">
+                
+                    <h3>Lower Section</h3>
+                
+                    <button data-score="threeKind">3 Kind: <span id="threeKind">-</span></button>
+                    <button data-score="fourKind">4 Kind: <span id="fourKind">-</span></button>
+                    <button data-score="fullHouse">Full House: <span id="fullHouse">-</span></button>
+                    <button data-score="smallStraight">Small Straight: <span id="smallStraight">-</span></button>
+                    <button data-score="largeStraight">Large Straight: <span id="largeStraight">-</span></button>
+                    <button data-score="yahtzee">Yahtzee: <span id="yahtzee">-</span></button>
+                    <button data-score="chance">Chance: <span id="chance">-</span></button>
+                
+                    <div class="grandTotal">
+                        Grand Total: <span id="totalScore">0</span>
+                    </div>
+                
+                </div>
+            
+            </div>
 
-            </table>
+            <div id="highScoreArea">
+                <h3>Top 10 High Scores</h3>
+                <ol id="highScoreList"></ol>
+            </div>
 
         </div>
 

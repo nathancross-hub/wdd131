@@ -7,16 +7,24 @@ const totalScoreDisplay = document.getElementById("totalScore");
 const upperTotalDisplay = document.getElementById("upperTotal");
 const bonusScoreDisplay = document.getElementById("bonusScore");
 
+const highScoreList = document.getElementById("highScoreList");
+
 let rollsLeft = 3;
 let totalScore = 0;
 let upperTotal = 0;
 let bonusScore = 0;
+let categoriesFilled = 0;
+let hasRolledThisTurn = false;
+
+const totalCategories = 13;
 
 rollButton.addEventListener("click", rollDice);
 
 document.querySelectorAll("#scorecard button").forEach(button => {
     button.addEventListener("click", () => scoreCategory(button));
 });
+
+displayHighScores();
 
 function rollDice() {
     if (rollsLeft <= 0) {
@@ -47,6 +55,7 @@ function rollDice() {
 
         rollsLeft--;
         rollsLeftDisplay.textContent = rollsLeft;
+        hasRolledThisTurn = true;
         message.textContent = "";
     }, 500);
 }
@@ -57,6 +66,11 @@ function getValues() {
 }
 
 function scoreCategory(button) {
+    if (!hasRolledThisTurn) {
+        message.textContent = "Roll the dice before choosing a score.";
+        return;
+    }
+
     const category = button.dataset.score;
     const values = getValues();
     let score = 0;
@@ -78,6 +92,7 @@ function scoreCategory(button) {
 
     button.querySelector("span").textContent = score;
     button.disabled = true;
+    categoriesFilled++;
 
     if ([
         "ones",
@@ -100,6 +115,11 @@ function scoreCategory(button) {
 
     totalScore += score;
     totalScoreDisplay.textContent = totalScore + bonusScore;
+
+    if (categoriesFilled === totalCategories) {
+        endGame();
+        return;
+    }
 
     resetTurn();
 }
@@ -154,10 +174,57 @@ function isLargeStraight(values) {
 function resetTurn() {
     rollsLeft = 3;
     rollsLeftDisplay.textContent = rollsLeft;
+    hasRolledThisTurn = false;
 
     dice.forEach(die => {
         die.querySelector("input").checked = false;
     });
 
     message.textContent ||= "Score saved. Roll again.";
+}
+
+function endGame() {
+    const finalScore = totalScore + bonusScore;
+
+    rollButton.disabled = true;
+
+    dice.forEach(die => {
+        die.querySelector("input").checked = false;
+        die.querySelector("input").disabled = true;
+    });
+
+    message.textContent = `Game over! Final Score: ${finalScore}`;
+
+    let highScores = JSON.parse(localStorage.getItem("yahtzeeHighScores")) || [];
+
+    const qualifies = highScores.length < 10 || finalScore > highScores[highScores.length - 1].score;
+
+    if (qualifies) {
+        const playerName = prompt("You made the top 10! Enter your name:");
+
+        if (playerName) {
+            highScores.push({
+                name: playerName,
+                score: finalScore
+            });
+
+            highScores.sort((a, b) => b.score - a.score);
+            highScores = highScores.slice(0, 10);
+
+            localStorage.setItem("yahtzeeHighScores", JSON.stringify(highScores));
+            displayHighScores();
+        }
+    }
+}
+
+function displayHighScores() {
+    const highScores = JSON.parse(localStorage.getItem("yahtzeeHighScores")) || [];
+
+    highScoreList.innerHTML = "";
+
+    highScores.forEach(score => {
+        const li = document.createElement("li");
+        li.textContent = `${score.name}: ${score.score}`;
+        highScoreList.appendChild(li);
+    });
 }
