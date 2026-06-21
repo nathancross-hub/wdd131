@@ -1,0 +1,161 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo-title img {
+  width: 70px;
+}
+
+h1,
+h2 {
+  font-family: "Amatic SC", cursive;
+  color: #1b5e8c;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0;
+  color: #333;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-area {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.search-area input {
+  flex: 1;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #777;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-area button {
+  width: 50px;
+  border: 1px solid #777;
+  background-color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search-area button img {
+  width: 24px;
+}
+
+.recipe-card {
+  display: flex;
+  gap: 25px;
+  border: 1px solid #999;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.recipe-image {
+  width: 350px;
+  border-radius: 5px;
+}
+
+.recipe-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.tag {
+  border: 1px solid #333;
+  padding: 5px 10px;
+  width: fit-content;
+  font-size: 14px;
+}
+
+.recipe-info h2 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.rating {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.description {
+  line-height: 1.5;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+}
+
+footer a {
+  color: #1b5e8c;
+  font-size: 14px;
+}
+
+.social {
+  display: flex;
+  gap: 12px;
+}
+
+.social img {
+  width: 35px;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .logo-title {
+    gap: 10px;
+  }
+
+  .logo-title img {
+    width: 50px;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  .recipe-card {
+    flex-direction: column;
+  }
+
+  .recipe-image {
+    width: 100%;
+  }
+
+  .description {
+    display: none;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    gap: 15px;
+    text-align: center;
+  }
+}
