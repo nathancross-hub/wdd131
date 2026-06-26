@@ -159,3 +159,7 @@ footer a {
     text-align: center;
   }
 }
+
+.recipe-card .recipe-card {
+    margin-bottom: 25px;
+}
