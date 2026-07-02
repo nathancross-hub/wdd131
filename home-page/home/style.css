@@ -1,0 +1,17 @@
+#logo{
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+}
+#taskbar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border: 20px white solid;
+    border-radius: 10px;
+}
+body{
+    background-color: #F8EFE8;
+}
