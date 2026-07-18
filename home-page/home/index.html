@@ -3,22 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="bonzai Furniture restores unwanted furniture and sells quality pieces at affordable prices.">
+    <title>bonzai Furniture | Home</title>
     <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <div id="taskbar">
-            <img src="/images/bonzai_logo.png" alt="bonzai logo image" id="logo">
-            <p>------bonzai------ <br>-----furniture-----</p>
-            <p> </p>
-            <p> </p>
-            <a href="/home/index.html">Home</a>
-            <a href="/inventory/index.html">Inventory</a>
-            <a href="/contact/index.html">Contact</a>
-            <a href="/cart/index.html">Cart</a>
-        </div>
+        <nav id="taskbar">
+            <a href="index.html" class="brand">
+                <img src="../images/bonzai_logo.png" alt="bonzai Furniture logo" class="logo">
+                <div>
+                    <span class="brand-name">bonzai</span>
+                    <span class="brand-type">furniture</span>
+                </div>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="../inventory/index.html">Inventory</a>
+                <!-- <a href="../contact/index.html">Contact</a>
+                <a href="../cart/index.html">Cart</a> -->
+            </div>
+        </nav>
     </header>
-    <h1>Home</h1>
+
+    <main>
+        <section id="top">
+            <div class="hero-content">
+                <p class="eyebrow">Affordable. Restored. Ready for your home.</p>
+                <h1>Quality Furniture.<br>Great Prices.</h1>
+                <p>
+                    Give your home a fresh look without paying the expensive
+                    price of brand-new furniture.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="../inventory/index.html" class="primary-button">
+                        View Inventory
+                    </a>
+
+                    <!-- <a href="../contact/index.html" class="secondary-button">
+                        Contact Us
+                    </a> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="whatIs">
+            <div class="what-text">
+                <p class="section-label">Our Mission</p>
+                <h2>What is bonzai?</h2>
+
+                <p>
+                    At bonzai Furniture, we find furniture that is no longer
+                    wanted because it is damaged, broken, or simply needs a
+                    fresh start. We repair and restore each piece so it can
+                    become useful again.
+                </p>
+
+                <p>
+                    Our goal is to make quality furniture more affordable while
+                    reducing waste. Instead of sending a good piece of furniture
+                    to the landfill, we give it another chance to become part of
+                    someone’s home.
+                </p>
+
+                <a href="../inventory/index.html" class="text-link">
+                    Browse our available furniture →
+                </a>
+            </div>
+
+            <div class="couch-container">
+                <img src="../images/couch.png" alt="Restored couch available from bonzai Furniture" id="couch">
+            </div>
+        </section>
+
+        <section id="about">
+            <p class="section-label">About Us</p>
+            <h2>Furniture with a second chance</h2>
+
+            <div class="about-cards">
+                <article class="about-card">
+                    <h3>Affordable Prices</h3>
+                    <p>
+                        We offer furniture at prices that are easier on your
+                        budget than purchasing brand-new pieces.
+                    </p>
+                </article>
+
+                <article class="about-card">
+                    <h3>Quality Restoration</h3>
+                    <p>
+                        We inspect, clean, repair, and improve our furniture
+                        before making it available for sale.
+                    </p>
+                </article>
+
+                <article class="about-card">
+                    <h3>Less Waste</h3>
+                    <p>
+                        Restoring furniture keeps useful items out of landfills
+                        and gives them a new purpose.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            <img src="../images/bonzai_logo.png" alt="bonzai Furniture logo" class="logo">
+
+            <div>
+                <h3>bonzai</h3>
+                <p>Quality Furniture.<br>Great Prices.</p>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="../inventory/index.html">Inventory</a>
+            <!-- <a href="../contact/index.html">Contact</a>
+            <a href="../cart/index.html">Cart</a> -->
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61590571414776" aria-label="Visit bonzai Furniture on Facebook">
+                    <img class="social" src="../images/fb_logo.png" alt="Facebook logo">
+                </a>
+
+                <a href="https://www.instagram.com/bonzaifurniture/" aria-label="Visit bonzai Furniture on Instagram">
+                    <img class="social" src="../images/ins_logo.png" alt="Instagram logo">
+                </a>
+            </div>
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 bonzai Furniture. All rights reserved.
+        </p>
+    </footer>
 </body>
 </html>
