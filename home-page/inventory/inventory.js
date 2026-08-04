@@ -107,14 +107,35 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Great for holding nice corner decorations or even books. Would also look great " +
                 "outside too!",
             status: "Available"
-        }
+        },
+        {
+            name: "All-Inclusive Entertainment Center",
+            category: "Misc",
+            price: "$250",
+            image: "../images/mini_fridge_tv.jpg",
+            description:
+                "This piece features a working TV and mini fridge so that you can watch a show " +
+                "or play a game with a cold drink at an arm's length! LED light strips make it even more modern! ",
+            status: "Available"
+        },
+        {
+            name: "Grey Sectional",
+            category: "Couch",
+            price: "$250",
+            image: "../images/grey_sectional.png",
+            description:
+                "This light grey/blueish sectional is in great condition and has a very clean look. " +
+                "Have friends over and be able to sit and visit with this very comfortable couch.",
+            status: "Available"
+        } 
+        
 
         /*,
         {
             name: "",
             category: "",
             price: "$",
-            image: "/wdd131/home/images/",
+            image: "../images/",
             description:
                 "" +
                 "",
